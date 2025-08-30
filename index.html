@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ViggLauncher</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #7f5af0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #f5f5f5;
+    }
+    .launcher {
+      text-align: center;
+      padding: 40px 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      max-width: 440px;
+      width: 90%;
+    }
+    .launcher h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: 1.25rem;
+      margin: 30px 0 10px;
+      font-weight: bold;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 5px;
+    }
+    .version-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.2s, background-color 0.2s, color 0.2s;
+      background-color: #fff;
+      color: #000;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #000;
+      color: #fff;
+    }
+  </style>
+  <!-- Include FileSaver.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+  <div class="launcher">
+    <h1>ViggLauncher</h1>
+
+    <!-- Section: Eaglercraft -->
+    <div class="section-title">Eaglercraft Versions</div>
+    <div class="version-links">
+      <a class="btn" href="https://saiyangonzalez01.github.io/Eaglercraft-SP-101/" target="_blank">Eaglercraft 1.5.2</a>
+      <a class="btn" href="https://play.crackedpvp.club/clients/eagler-js/index.html" target="_blank">EaglercraftX 1.8</a>
+      <a class="btn" href="https://www.autistici.org/eaglercraft/play/Eaglercraft_b1.3/" target="_blank">Eaglercraft b1.3</a>
+      <a class="btn" href="https://play.crackedpvp.club/clients/112-javascript-u1/index.html" target="_blank">Eaglercraft 1.12.2</a>
+    </div>
+
+    <!-- Section: Rubydung -->
+    <div class="section-title">Rubydung</div>
+    <div class="version-links">
+      <a class="btn" href="https://radmanplays.github.io/rd-recrafted/" target="_blank">Rubydung Client</a>
+      <a class="btn" href="https://radmanplays.github.io/rd-132211/" target="_blank">Rubydung Classic</a>
+    </div>
+
+    <!-- Section: Texture Packs -->
+    <div class="section-title">Texture Packs</div>
+    <div class="version-links">
+      <button class="btn" id="faithfulDownloadBtn">Faithful 32x (1.8.9)</button>
+      <a class="btn" href="https://viggle-by.github.io/gnhtghhgh/stardust.html" target="_blank">Stardust 256x</a>
+      <a class="btn" href="https://viggle-by.github.io/gnhtghhgh/!%20§5amethyst%20§8[§516§7x§8].zip" target="_blank">Amethyst 16x</a>
+      <a class="btn" href="https://viggle-by.github.io/gnhtghhgh/!%20§bnebu§dl§ba%20§8[§f16§dx§8].zip" target="_blank">Nebula 16x</a>
+    </div>
+
+    <!-- Section: Clients -->
+    <div class="section-title">Clients</div>
+    <div class="version-links">
+      <a class="btn" href="https://client.eaglercraft.win/eagler-files/1.8/resent4.0/index.html" target="_blank">Resent Client</a>
+      <a class="btn" href="https://play.crackedpvp.club/clients/astra16-js/index.html" target="_blank">Astra Client</a>
+    </div>
+
+    <!-- Section: Tools -->
+    <div class="section-title">Tools</div>
+    <div class="version-links">
+      <a class="btn" href="https://dicestack88.netlify.app/launcher.html" target="_blank">Open Yee Loader</a>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript function to trigger the download for Faithful 32x using FileSaver.js
+    document.getElementById("faithfulDownloadBtn").addEventListener("click", function() {
+      // Direct link to the Faithful 32x zip file
+      const fileUrl = "https://viggle-by.github.io/gnhtghhgh/Faithful-32x-1.8.9.zip"; // Replace with the actual file URL
+      const fileName = "Faithful-32x-1.8.9.zip"; // Filename for the download
+
+      // Fetch the file and trigger download
+      fetch(fileUrl)
+        .then(response => response.blob()) // Convert to Blob
+        .then(blob => {
+          saveAs(blob, fileName); // Use FileSaver.js to trigger the download
+        })
+        .catch(error => {
+          alert("Error downloading the file.");
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
