@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ViggLauncher</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -58,20 +58,20 @@
       color: #fff;
     }
   </style>
-  <!-- Include FileSaver.js library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </head>
 <body>
   <div class="launcher">
     <h1>ViggLauncher</h1>
 
-    <!-- Section: Eaglercraft -->
+    <!-- Section: Eaglercraft Versions -->
     <div class="section-title">Eaglercraft Versions</div>
     <div class="version-links">
       <a class="btn" href="https://saiyangonzalez01.github.io/Eaglercraft-SP-101/" target="_blank">Eaglercraft 1.5.2</a>
       <a class="btn" href="https://play.crackedpvp.club/clients/eagler-js/index.html" target="_blank">EaglercraftX 1.8</a>
       <a class="btn" href="https://www.autistici.org/eaglercraft/play/Eaglercraft_b1.3/" target="_blank">Eaglercraft b1.3</a>
       <a class="btn" href="https://play.crackedpvp.club/clients/112-javascript-u1/index.html" target="_blank">Eaglercraft 1.12.2</a>
+      <a class="btn" href="Eaglercraft_1.4.7_OF_HD_U_D5_Offline_Download.html" target="_blank">Eaglercraft 1.4.7 (JS)</a>
+      <a class="btn" href="Eaglercraft_1.4.7_OPTIFINE_HD_D5_WASM.html" target="_blank">Eaglercraft 1.4.7 (WASM)</a>
     </div>
 
     <!-- Section: Rubydung -->
@@ -103,25 +103,5 @@
       <a class="btn" href="https://dicestack88.netlify.app/launcher.html" target="_blank">Open Yee Loader</a>
     </div>
   </div>
-
-  <script>
-    // JavaScript function to trigger the download for Faithful 32x using FileSaver.js
-    document.getElementById("faithfulDownloadBtn").addEventListener("click", function() {
-      // Direct link to the Faithful 32x zip file
-      const fileUrl = "https://viggle-by.github.io/gnhtghhgh/Faithful-32x-1.8.9.zip"; // Replace with the actual file URL
-      const fileName = "Faithful-32x-1.8.9.zip"; // Filename for the download
-
-      // Fetch the file and trigger download
-      fetch(fileUrl)
-        .then(response => response.blob()) // Convert to Blob
-        .then(blob => {
-          saveAs(blob, fileName); // Use FileSaver.js to trigger the download
-        })
-        .catch(error => {
-          alert("Error downloading the file.");
-          console.error(error);
-        });
-    });
-  </script>
 </body>
 </html>
